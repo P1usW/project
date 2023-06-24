@@ -1,0 +1,36 @@
+.home {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: calc(100vh - 5rem);
+
+  &_right {
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 25px;
+    width: 40%;
+  }
+
+  &_photo {
+    
+  }
+
+  &_left {
+    width: 40%;
+    height: auto;
+  }
+
+  &_text {
+    text-align: justify;
+    line-height: 1.5rem;
+  }
+
+  &_buttons {
+    display: flex;
+    gap: 15px;
+  }
+}

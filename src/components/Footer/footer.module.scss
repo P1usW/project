@@ -1,0 +1,49 @@
+.footer {
+  box-sizing: border-box;
+  display: grid;
+  gap: 15px;
+  grid-template-areas: 
+    "name other"
+    "info info";
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+
+  padding: 25px;
+  width: 100%;
+  height: 10rem;
+
+  
+  & :first-child {
+    grid-area: name;
+  }
+
+  & :nth-child(2) {
+    grid-area: other;
+  }
+
+  & :nth-child(3) {
+    grid-area: info;
+  }
+
+
+  &_span {
+    font-weight: 800;
+  }
+
+  &_text {
+    font-size: small;
+    text-align: center;
+  }
+
+  &_icon {
+    cursor: pointer;
+    color: currentColor;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &_link {
+    color: var(--primary-color);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

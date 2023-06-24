@@ -1,0 +1,14 @@
+{
+  "testEnvironment": "jsdom",
+  "moduleNameMapper": {
+    "^@src/(.*)$": "<rootDir>/src/$1",
+    "^@components/(.*)$": "<rootDir>/src/components/$1",
+    "\\.(css|less)$": "identity-obj-proxy"
+  },
+  "setupFiles": ["<rootDir>/src/test/testUtils/mokMatchMedia.js"],
+  "transform": {
+    "^.+\\.[jt]sx?$": "babel-jest",
+    ".+\\.(css|styl|less|sass|scss)$": "jest-css-modules-transform",
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "jest-css-modules-transform"
+  }
+}

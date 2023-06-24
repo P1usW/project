@@ -1,0 +1,45 @@
+%btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+  background-color: var(--element-color);
+  color: var(--primary-color);
+  
+  padding: 0.5rem 0.75rem;
+  margin: {
+    top: 15px;
+    // left: 15px;
+  }
+
+  transition: color 0.25s ease-out;
+  
+}
+
+.btn {
+  
+  &_button {
+    @extend %btn;
+  }
+
+  &_link {
+    @extend %btn;
+    text-decoration: none;
+  }
+
+
+}
+
+@media (pointer: fine) and (hover: hover) {
+  %btn:hover {
+    color: currentColor;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  %btn:active {
+    color: currentColor
+  }
+}
+

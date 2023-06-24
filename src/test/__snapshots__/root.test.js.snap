@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test render Footer snapshot 1`] = `
+<footer
+  class="footer"
+>
+  <div
+    class="footer_text"
+  >
+    <p>
+      <span
+        class="footer_span"
+      >
+        Iv
+      </span>
+      an 
+      <span
+        class="footer_span"
+      >
+        Sh
+      </span>
+      avrin.
+    </p>
+    <p>
+      Frontend - developer.
+    </p>
+  </div>
+  <div
+    class="footer_text"
+  >
+    <p>
+      My contacts are on top
+    </p>
+    <a
+      class="footer_link"
+      href="#top"
+    >
+      back to top
+    </a>
+  </div>
+  <div
+    class="footer_text"
+  >
+    <p>
+      The site was created without using UI libraries, if you find a flaw, you can leave a message on 
+      <i>
+        github
+      </i>
+       
+      <a
+        class="footer_icon"
+        href="#"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <span />
+      </a>
+    </p>
+    <p>
+      © 2023 IvSh. All Rights Reserved.
+    </p>
+  </div>
+</footer>
+`;
