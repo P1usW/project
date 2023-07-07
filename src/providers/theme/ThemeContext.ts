@@ -1,9 +1,9 @@
 import React, {createContext} from "react";
-import themes from "../../constant/themes";
+import themes, { ThemesType } from "../../constant/themes";
 
 interface ThemeContext {
-  theme: string,
-  setTheme: React.Dispatch<string>
+  theme: ThemesType,
+  setTheme: React.Dispatch<ThemesType>
 }
 
 const ThemeContext = createContext({} as ThemeContext);
