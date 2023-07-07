@@ -1,7 +1,9 @@
 import Home from "@src/components/Home/Home";
 import { defer } from "react-router";
-import { getUserInfo } from "@src/api/GitHubApi";
+
 import { lazy } from "react";
+import { getReposInfo } from "@src/api/gitHubApi/getReposInfo";
+import { getUserInfo } from "@src/api/gitHubApi/getUserInfo";
 
 const Projects = lazy(() => import(/* webpackChunkName: "Projects" */ '@src/components/Projects/Projects'));
 const NotFound = lazy(() => import(/* webpackChunkName: "NotFound" */ '@src/components/NotFound/NotFound'));
@@ -20,8 +22,10 @@ const publicRoutes = [
     path: 'projects',
     Component: Projects,
     loader: () => {
-      const user = getUserInfo('Pl1usW');
-      return defer({user})
+      const username = 'P1usW';
+      const repos = getReposInfo(username);
+      const user = getUserInfo(username)
+      return defer({repos, user})
     }
   },
   {
