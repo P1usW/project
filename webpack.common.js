@@ -23,6 +23,8 @@ module.exports = function (env, argv) {
   const isDevMode = mode !== 'production';
   
   return {
+    // source-map
+    devtool: 'hidden-source-map',
     target: ['browserslist'],
     // Webpack noise constrained to errors and warnings
     stats: 'errors-warnings',
@@ -163,14 +165,12 @@ module.exports = function (env, argv) {
         {
           test: /\.(png|svg|jpe?g|gif|pdf)$/,
           exclude: /node_modules/,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: 'static/media/[name].[hash].[ext]'
-              },
-            },
-          ],
+          type: 'asset/resource'
+        },
+        {
+          test: /\.url\.(png|svg|jpe?g|gif|pdf)$/,
+          exclude: /node_modules/,
+          type: 'asset/inline'
         },
       ],
     },

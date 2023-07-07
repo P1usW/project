@@ -45,6 +45,10 @@ module.exports = (env, argv) => {
       new CompressionPlugin({
         // optional: it creates gzipped (compressed) files in '[path].gz[query]'
         threshold: filesThreshold, // (bytes). Only assets bigger than this size are processed
+        algorithm: "gzip",
+        test: /\.js$|\.html$/,
+        threshold: 10240,
+        minRatio: 0.8
       }),
     ],
   };
