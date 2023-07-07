@@ -3,12 +3,27 @@ import Footer from '@src/components/Footer/Footer';
 import userEvent from '@testing-library/user-event';
 import { 
   createMemoryRouter,
-  RouterProvider
+  RouterProvider,
 } from 'react-router-dom';
 import { publicRoutes } from '@src/constant/routes';
 import Layout from '@src/components/Layout/Layout';
 import '@testing-library/jest-dom';
 import './testUtils/mokScrollTo'
+import axios from 'axios';
+
+jest.mock('../api/gitHubApi/getReposInfo', () => {
+  return {
+    __esModule: true,
+    getReposInfo: jest.fn(() => [
+      {
+        key: 'repos.name',
+        name: 'repos.name',
+        html_url: 'repos.html_url'
+      }
+    ])
+  }
+})
+
 
 describe.skip('Test render', () => {
   test('Footer snapshot', () => {

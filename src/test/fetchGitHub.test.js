@@ -1,10 +1,9 @@
 import { describe, expect, test, jest } from '@jest/globals';
-import { getUserInfo } from '@src/api/GitHubApi';
+import { getUserInfo } from '@src/api/gitHubApi/getUserInfo';
 
-jest.mock('../api/GitHubApi', () => {
+jest.mock('../api/gitHubApi/getUserInfo', () => {
   return {
     __esModule: true,
-    default: jest.fn(),
     getUserInfo: jest.fn(() => 42)
   }
 })
