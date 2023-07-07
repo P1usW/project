@@ -1,0 +1,110 @@
+@mixin cardConfig($cards) {
+  @each $pos, $trans in $cards {
+    &_#{$pos} {
+      &__enter {
+        opacity: 0;
+        transform: $trans;
+      }
+      &__enterActive {
+        opacity: 1;
+        transform: none;
+        transition: opacity 1000ms, transform 1000ms;
+      }
+      
+      &__exit {
+        opacity: 1;
+      }
+      
+      &__exitActive {
+        opacity: 0;
+        transition: opacity 1000ms, transform 1000ms;
+      }
+    }
+  }
+}
+
+.card {
+  // $cardPos: (left: (-50%, 0), right: (50%, 0), middle: (0, 50%));
+  $cardPos: (
+    left: translate(-150px, 0), 
+    right: translate(150px, 0), 
+    top: translate(0, -150px),
+    bottom: translate(0, 150px), 
+    up: scale(1.1),
+    down: scale(0.9)
+  );
+  @include cardConfig($cardPos);
+
+  height: auto;
+  width: auto;
+  position: relative;
+}
+
+// Compiler result
+// .card_left {
+//   &__enter {
+//     opacity: 0;
+//     transform: translate(-50%);
+//   }
+  
+//   &__enterActive {
+//     opacity: 1;
+//     transform: none;
+//     transition: opacity 1000ms, transform 1000ms;
+//   }
+  
+//   &__exit {
+//     opacity: 1;
+//   }
+  
+//   &__exitActive {
+//     opacity: 0;
+//     transition: opacity 1000ms, transform 1000ms;
+//   }
+// }
+
+// .card_right {
+//   &__enter {
+//     opacity: 0;
+//     transform: translate(50%);
+//   }
+  
+//   &__enterActive {
+//     opacity: 1;
+//     transform: none;
+//     transition: opacity 1000ms, transform 1000ms;
+//   }
+  
+//   &__exit {
+//     opacity: 1;
+//   }
+  
+//   &__exitActive {
+//     opacity: 0;
+//     transition: opacity 1000ms, transform 1000ms;
+//   }
+// }
+
+// .card_middle {
+//   &__enter {
+//     opacity: 0;
+//     transform: translateY(50%);
+//   }
+  
+//   &__enterActive {
+//     opacity: 1;
+//     transform: none;
+//     transition: opacity 1000ms, transform 1000ms;
+//   }
+  
+//   &__exit {
+//     opacity: 1;
+//   }
+  
+//   &__exitActive {
+//     opacity: 0;
+//     transition: opacity 1000ms, transform 1000ms;
+//   }
+// }
+
+

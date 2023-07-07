@@ -2,7 +2,9 @@ declare namespace HomeModuleScssNamespace {
   export interface IHomeModuleScss {
     home: string;
     home_buttons: string;
+    home_gradient: string;
     home_left: string;
+    home_photo: string;
     home_right: string;
     home_text: string;
   }
