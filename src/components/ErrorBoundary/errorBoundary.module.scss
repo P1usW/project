@@ -1,0 +1,27 @@
+.error {
+  &_page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0 20px;
+    height: calc(100vh - 5rem);
+    min-height: calc(100vh - 5rem);
+    width: 100%;
+  }
+
+  &_message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20px;
+    background-color: var(--error-color);
+    color: var(--on-error-color);
+
+    min-height: 100px;
+    max-height: max-content;
+    width: 300px;
+  }
+}

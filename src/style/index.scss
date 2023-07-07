@@ -43,6 +43,9 @@
 
   --secondary-color: #{f.$secondary-color};
   --on-secondary-color: #{f.$on-secondary-color};
+
+  --only-light: #{f.$light-00dp};
+  --only-dark: #{f.$dark-00dp};
 }
 
 * {
@@ -52,6 +55,8 @@
 
 html {
   font-size: 16px;
+  line-height: 1.5;
+
   scroll-behavior: smooth;
 }
 
@@ -66,10 +71,13 @@ html[data-theme=dark] {
 body {
   color: var(--on-background-color);
   font-family: f.$font-family;
+  line-height: inherit;
 
   background-color: var(--background-color);
+}
 
-  transition: background-color 0.25s linear;
+main {
+  min-height: calc(100vh - 5rem);
 }
 
 #root {
