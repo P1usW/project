@@ -9,6 +9,7 @@ import { useTheme } from '@src/hooks/useTheme';
 import VkIcon from '@src/ui/icons/MyIcon/VkIcon';
 import MoonIcon from '@src/ui/icons/ThemeIcon/MoonIcon';
 import SunnyIcon from '@src/ui/icons/ThemeIcon/SunnyIcon';
+import NewTabLink from '@src/ui/NewTabLink/NewTabLink';
 
 const NavBar: FC = () => {
   const { theme, setTheme } = useTheme();
@@ -29,10 +30,6 @@ const NavBar: FC = () => {
             Projects
             <span className={style.nav_link__line}/>
           </NavLink>
-          <NavLink className={style.nav_link} to='/'>
-            SayHello
-            <span className={style.nav_link__line}/>
-          </NavLink>
         </div>
         <div className={style.nav_right}>
           <a
@@ -41,38 +38,30 @@ const NavBar: FC = () => {
           >
             <Gmail/>
           </a>
-          <a
-            target='_blank'
-            rel='noreferrer'
+          <NewTabLink
             href={contact.vk}
             className={style.nav_link}
           >
             <VkIcon/>
-          </a>
-          <a
-            target='_blank'
-            rel='noreferrer'
+          </NewTabLink>
+          <NewTabLink
             href={contact.gitHub}
             className={style.nav_link}
           >
             <NavIcon icon='line-md:github'/>
-          </a>
-          <a
-            target='_blank'
-            rel='noreferrer'
+          </NewTabLink>
+          <NewTabLink
             href={contact.telegram}
             className={style.nav_link}
           >
             <NavIcon icon='line-md:telegram'/>
-          </a>
-          <a
-            target='_blank'
-            rel='noreferrer'
+          </NewTabLink>
+          <NewTabLink
             href={contact.linkedin}
             className={style.nav_link}
           >
             <NavIcon icon='line-md:linkedin'/>
-          </a>
+          </NewTabLink>
           <button
             className={style.nav_link}
             onClick={() => {
