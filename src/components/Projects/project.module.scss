@@ -1,3 +1,5 @@
+@use '../../style/setting' as s;
+
 .project {
   box-sizing: border-box;
   
@@ -46,10 +48,23 @@
     text-align: center;
     width: 100%;
   }
+
+  &_number {
+    color: var(--primary-color);
+  }
 }
 
-@media (max-width: 700px) {
+@media (max-width: s.$container-max-widths-md) {
   .project {
-    grid-template-columns: 1fr;
+    &_list {
+      grid-template-columns: 1fr;
+    }
+
+    &_photo_filter {
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      background: none;
+    }
   }
 }

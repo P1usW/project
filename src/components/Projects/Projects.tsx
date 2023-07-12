@@ -56,7 +56,7 @@ function getUserOrError(values: UserValues) {
         <h1 
           className={style.project_header}
         >
-          Repositories: {values.public_repos}
+          Repositories: <span className={style.project_number}>{values.public_repos}</span>
         </h1>
       </div>
       

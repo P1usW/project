@@ -3,6 +3,7 @@ declare namespace ProjectModuleScssNamespace {
     project: string;
     project_header: string;
     project_list: string;
+    project_number: string;
     project_photo: string;
     project_photo_filter: string;
     project_user: string;
