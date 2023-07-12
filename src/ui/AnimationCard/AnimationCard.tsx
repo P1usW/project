@@ -2,12 +2,6 @@ import { FC, ReactNode, useEffect, useRef, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import style from './animationCard.module.scss';
 
-interface AboutLeft {
-  children?: ReactNode,
-  pos: 'left' | 'right' | 'top' | 'bottom' | 'up' | 'down',
-  divClassName?: string
-}
-
 const classNames = {
   left: {
     enter: style.card_left__enter,
@@ -46,8 +40,13 @@ const classNames = {
     exitActive: style.card_down__exitActive,
   }
 }
+interface AnimationCard {
+  children?: ReactNode,
+  pos: keyof typeof classNames,
+  divClassName?: string
+}
 
-const AboutLeft: FC<AboutLeft> = ({children, pos, divClassName=style.card, ...props}) => {
+const AnimationCard: FC<AnimationCard> = ({children, pos, divClassName=style.card, ...props}) => {
   const divBlock = useRef(null)
   const nodeRef = useRef(null);
   const [inWindow, setInWindow] = useState(false);
@@ -77,12 +76,12 @@ const AboutLeft: FC<AboutLeft> = ({children, pos, divClassName=style.card, ...pr
         unmountOnExit={true}
         classNames={classNames[pos]}
         timeout={1000}
-      >
+        >
         <div 
           className={divClassName}
           ref={nodeRef} 
           {...props}
-        >
+          >
           {children}
         </div>
       </CSSTransition>
@@ -91,4 +90,5 @@ const AboutLeft: FC<AboutLeft> = ({children, pos, divClassName=style.card, ...pr
   );
 };
 
-export default AboutLeft;
+
+export default AnimationCard;

@@ -18,15 +18,27 @@ const NavBar: FC = () => {
     <header className={style.header_nav}>
       <nav className={style.nav}>
         <div className={style.nav_left}>
-          <NavLink className={style.nav_link} to='/'>
+          <NavLink 
+            className={style.nav_link} 
+            to='/'
+            aria-label="Home page"
+          >
             Home
             <span className={style.nav_link__line}/>
           </NavLink>
-          <NavLink className={style.nav_link} to='/about'>
+          <NavLink 
+            className={style.nav_link} 
+            to='/about'
+            aria-label="About me page"
+          >
             About
             <span className={style.nav_link__line}/>
           </NavLink>
-          <NavLink className={style.nav_link} to='/projects'>
+          <NavLink 
+            className={style.nav_link} 
+            to='/projects'
+            aria-label="My projects page"
+          >
             Projects
             <span className={style.nav_link__line}/>
           </NavLink>
@@ -35,45 +47,52 @@ const NavBar: FC = () => {
           <a
             href={contact.email}
             className={style.nav_link}
+            aria-label="Gmail link"
           >
             <Gmail/>
           </a>
           <NewTabLink
             href={contact.vk}
             className={style.nav_link}
+            aria-label="Vkontakte link"
           >
             <VkIcon/>
           </NewTabLink>
           <NewTabLink
             href={contact.gitHub}
             className={style.nav_link}
+            aria-label="GitHub link"
           >
             <NavIcon icon='line-md:github'/>
           </NewTabLink>
           <NewTabLink
             href={contact.telegram}
             className={style.nav_link}
+            aria-label="Telegram link"
           >
             <NavIcon icon='line-md:telegram'/>
           </NewTabLink>
           <NewTabLink
             href={contact.linkedin}
             className={style.nav_link}
+            aria-label="Linked in link"
           >
             <NavIcon icon='line-md:linkedin'/>
           </NewTabLink>
           <button
             className={style.nav_link}
+            aria-label="Switch theme"
             onClick={() => {
               if (theme === themes.light) setTheme(themes.dark);
               if (theme === themes.dark) setTheme(themes.light);
-            }}>
-              {
-                theme === themes.light 
-                ? <MoonIcon/>
-                : <SunnyIcon/>
-              }
-            </button>
+            }}
+          >
+            {
+              theme === themes.light 
+              ? <MoonIcon/>
+              : <SunnyIcon/>
+            }
+          </button>
         </div>
       </nav>
     </header>

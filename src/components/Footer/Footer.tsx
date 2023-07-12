@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, SyntheticEvent } from 'react';
 import style from './footer.module.scss';
 import { Icon } from '@iconify/react';
 
@@ -20,8 +20,12 @@ const Footer: FC = () => {
       >
         <p>My contacts are on top</p>
         <a
-          onClick={() => window.scrollTo(0, 0)}
+          onClick={(event: SyntheticEvent) => {
+            event.preventDefault();
+            window.scrollTo(0, 0)
+          }}
           className={style.footer_link}
+          href='#top'
         >
           back to top 
         </a>
@@ -30,7 +34,8 @@ const Footer: FC = () => {
         className={style.footer_text}
       >
         <p>
-          The site was created without using UI libraries, if you find a flaw, you can leave a message on <i>github</i> <a className={style.footer_icon} target='_blank' rel='noreferrer' href='#'><Icon icon="bx:edit"/></a>
+          The site was created without using UI libraries, if you find a flaw, you can leave a message
+          on  <i>github</i> <a className={style.footer_icon} target='_blank' rel='noreferrer' href='#'><Icon icon="bx:edit"/></a>
         </p>
         <p>
           © 2023 IvSh. All Rights Reserved.

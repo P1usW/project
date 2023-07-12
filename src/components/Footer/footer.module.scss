@@ -1,3 +1,5 @@
+@use '../../style/setting' as s;
+
 .footer {
   box-sizing: border-box;
   display: grid;
@@ -5,7 +7,7 @@
   grid-template-areas: 
     "name other"
     "info info";
-  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
 
   padding: 25px;
   width: 100%;
@@ -39,6 +41,8 @@
     color: currentColor;
     display: inline-block;
     vertical-align: middle;
+
+    animation: icon-resize 3s linear infinite alternate;
   }
 
   &_link {
@@ -47,3 +51,18 @@
     cursor: pointer;
   }
 }
+
+@keyframes icon-resize {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.8);
+  }
+}
+
+// @media (max-width: s.$container-max-widths-md) {
+//   .footer {
+    
+//   }
+// }

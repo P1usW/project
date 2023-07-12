@@ -1,3 +1,5 @@
+@use '../../style/setting' as s;
+
 .header_nav {
     position: relative;
 
@@ -81,7 +83,7 @@
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: s.$container-max-widths-md) {
     .header_nav {
         height: 200px;
         transform: translate(-100%);
