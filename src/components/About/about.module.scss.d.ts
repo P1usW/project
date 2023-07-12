@@ -1,13 +1,6 @@
 declare namespace AboutModuleScssNamespace {
   export interface IAboutModuleScss {
-    about: string;
-    about_first: string;
-    about_me: string;
-    biography: string;
-    biography_header: string;
-    biography_photo: string;
-    biography_text: string;
-    divClassName: string;
+    about_page: string;
   }
 }
 
