@@ -33,32 +33,50 @@ const classNames = {
     exit: style.card_up__exit,
     exitActive: style.card_up__exitActive,
   },
-  down : {
+  down: {
     enter: style.card_down__enter,
     enterActive: style.card_down__enterActive,
     exit: style.card_down__exit,
     exitActive: style.card_down__exitActive,
+  },
+  opacity: {
+    enter: style.card_opacity__enter,
+    enterActive: style.card_opacity__enterActive,
+    exit: style.card_opacity__exit,
+    exitActive: style.card_opacity__exitActive,
   }
 }
 interface AnimationCard {
   children?: ReactNode,
   pos: keyof typeof classNames,
+  rootMargin?: string,
+  threshold?: number | number[],
   divClassName?: string
 }
 
-const AnimationCard: FC<AnimationCard> = ({children, pos, divClassName=style.card, ...props}) => {
+const AnimationCard: FC<AnimationCard> = ({
+  children, 
+  pos, 
+  divClassName=style.card, 
+  rootMargin='0px 0px 0px 0px',
+  threshold,
+  ...props
+}) => {
   const divBlock = useRef(null)
   const nodeRef = useRef(null);
   const [inWindow, setInWindow] = useState(false);
   
   useEffect(() => {
     if (!divBlock.current) return;
-    
+
     const observe = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting) {
         setInWindow(true);
         observe.disconnect();
       }
+    }, {
+      rootMargin,
+      threshold,
     })
     
     observe.observe(divBlock.current)

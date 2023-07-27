@@ -13,6 +13,10 @@ declare namespace AnimationCardModuleScssNamespace {
     card_left__enterActive: string;
     card_left__exit: string;
     card_left__exitActive: string;
+    card_opacity__enter: string;
+    card_opacity__enterActive: string;
+    card_opacity__exit: string;
+    card_opacity__exitActive: string;
     card_right__enter: string;
     card_right__enterActive: string;
     card_right__exit: string;

@@ -31,7 +31,8 @@
     top: translate(0, -150px),
     bottom: translate(0, 150px), 
     up: scale(1.1),
-    down: scale(0.9)
+    down: scale(0.9),
+    opacity: none,
   );
   @include cardConfig($cardPos);
 
