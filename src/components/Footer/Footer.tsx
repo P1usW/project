@@ -12,7 +12,7 @@ const Footer: FC = () => {
           <span className={style.footer_span}>Iv</span>an <span className={style.footer_span}>Sh</span>avrin.
         </p>
         <p>
-          Frontend - developer.
+          Frontend developer.
         </p>
       </div>
       <div 
@@ -35,7 +35,7 @@ const Footer: FC = () => {
       >
         <p>
           The site was created without using UI libraries, if you find a flaw, you can leave a message
-          on  <i>github</i> <a className={style.footer_icon} target='_blank' rel='noreferrer' href='#'><Icon icon="bx:edit"/></a>
+          on <i>github</i> <a className={style.footer_icon} target='_blank' rel='noreferrer' href='#'><Icon icon="bx:edit"/></a>
         </p>
         <p>
           © 2023 IvSh. All Rights Reserved.

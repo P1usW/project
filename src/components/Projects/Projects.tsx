@@ -59,7 +59,6 @@ function getUserOrError(values: UserValues) {
           Repositories: <span className={style.project_number}>{values.public_repos}</span>
         </h1>
       </div>
-      
     </>
   )
 }
@@ -96,62 +95,3 @@ const Projects: FC = () => {
 };
 
 export default Projects;
-
-
-// interface LoaderProjects {
-//   repos: ReturnReposInfo,
-//   user: ReturnUserInfo,
-// }
-
-// interface Values {
-//   repos: Awaited<ReturnReposInfo>,
-//   user: Awaited<ReturnUserInfo>;
-// } 
-
-// function getListOrError({repos, user}: Values) {
-  
-//   if (typeof repos === 'string' || typeof user === 'string') {
-//     return <h1>Error! Please try again.</h1>
-//   } 
-//   console.log(repos)
-//   return (
-//     <>
-//       <h1>
-//         {user.name}
-//       </h1>
-//       {
-//         repos.map((repos) => {
-//           if (repos.private) return;
-
-//           return (
-//             <ProjectCard
-//               key={repos.name}
-//               name={repos.name}
-//               html_url={repos.html_url}
-//               language={repos.language}
-//             />
-//           )
-//         })
-//       }
-//     </>
-//   )
-// }
-
-// const Projects: FC = () => {
-//   const {repos, user} = useLoaderData() as LoaderProjects;
-
-//   return (
-//     <div className={style.project}>
-//       <Suspense fallback={<Loading/>}>
-//         <Await 
-//           resolve={{repos, user}} 
-//           errorElement={<h1>Error</h1>}
-//         >
-//           {(values: Values) => getListOrError(values)}
-//         </Await>
-//       </Suspense>
-//     </div>
-//   );
-// };
-
-// export default Projects;

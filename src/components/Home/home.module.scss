@@ -22,10 +22,12 @@
   }
 
   &_left {
-    height: auto;
+    height: 100%;
     width: 100%;
     max-width: 450px;
     min-width: 300px;
+    max-height: 500px;
+    min-height: 350px;
   }
 
   &_gradient {
@@ -36,8 +38,10 @@
   }
   
   &_photo {
-    width: 100%;
-    height: 100%;
+    max-width: 450px;
+    min-width: 300px;
+    max-height: 500px;
+    min-height: 350px;
     object-fit: cover;
   }
 

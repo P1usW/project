@@ -24,7 +24,7 @@ module.exports = function (env, argv) {
   
   return {
     // source-map
-    devtool: 'hidden-source-map',
+    devtool: 'source-map',
     target: ['browserslist'],
     // Webpack noise constrained to errors and warnings
     stats: 'errors-warnings',

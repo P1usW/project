@@ -50,6 +50,22 @@
   --nav-height: 5rem;
 }
 
+:root::-webkit-scrollbar {
+  overflow: auto;
+  width: 0.5rem;
+  background-color: transparent;
+  
+}
+:root::-webkit-scrollbar-thumb {
+  background-color: rgb(127, 127, 127);
+  border-radius: 5px;
+}
+
+:root {
+  scrollbar-color: rgb(127, 127, 127) transparent;
+  scrollbar-width: thin;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -80,6 +96,8 @@ body {
 
 main {
   min-height: calc(100vh - 5rem);
+  box-sizing: border-box;
+  padding: 0 20px;
 }
 
 #root {

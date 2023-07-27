@@ -7,9 +7,9 @@ import NavIcon from '@src/ui/icons/NavIcon';
 import Gmail from '@src/ui/icons/MyIcon/Gmail';
 import { useTheme } from '@src/hooks/useTheme';
 import VkIcon from '@src/ui/icons/MyIcon/VkIcon';
+import NewTabLink from '@src/ui/NewTabLink/NewTabLink';
 import MoonIcon from '@src/ui/icons/ThemeIcon/MoonIcon';
 import SunnyIcon from '@src/ui/icons/ThemeIcon/SunnyIcon';
-import NewTabLink from '@src/ui/NewTabLink/NewTabLink';
 
 const NavBar: FC = () => {
   const { theme, setTheme } = useTheme();
@@ -28,10 +28,18 @@ const NavBar: FC = () => {
           </NavLink>
           <NavLink 
             className={style.nav_link} 
-            to='/about'
+            to='/about-me'
             aria-label="About me page"
           >
-            About
+            About Me
+            <span className={style.nav_link__line}/>
+          </NavLink>
+          <NavLink 
+            className={style.nav_link} 
+            to='/experience'
+            aria-label="Experience page"
+          >
+            Experience
             <span className={style.nav_link__line}/>
           </NavLink>
           <NavLink 
