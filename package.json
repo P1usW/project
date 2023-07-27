@@ -6,6 +6,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "axios": "^1.4.0",
+    "chart.js": "^4.3.0",
     "classnames": "^2.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -71,7 +72,7 @@
     "webpack-merge": "^5.9.0"
   },
   "scripts": {
-    "build": "webpack --mode production --config webpack.prod.js",
+    "build": "webpack --mode production --config webpack.prod.js --sourceMap true",
     "serve": "webpack serve --mode development --config webpack.dev.js",
     "eslint": "eslint --ext .ts,.tsx src --fix",
     "test": "yarn jest",
