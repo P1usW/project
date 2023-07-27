@@ -2833,11 +2833,6 @@ batch@0.6.1:
   resolved "https://registry.npmjs.org/batch/-/batch-0.6.1.tgz"
   integrity sha512-x+VAiMRL6UPkx+kudNvxTl6hB2XNNCG2r+7wixVfIYwu/2HKRXimwQyaumLjMveWvT2Hkd/cAJw+QBMfJ/EKVw==
 
-big.js@^3.1.3:
-  version "3.2.0"
-  resolved "https://registry.npmjs.org/big.js/-/big.js-3.2.0.tgz"
-  integrity sha512-+hN/Zh2D08Mx65pZ/4g5bsmNiZUuChDiQfTUQ7qJr4/kuopCr88xZsAXv6mBoZEsUI4OuGHlX59qE94K2mMW8Q==
-
 big.js@^5.2.2:
   version "5.2.2"
   resolved "https://registry.npmjs.org/big.js/-/big.js-5.2.2.tgz"
@@ -3128,11 +3123,6 @@ colorette@^2.0.10, colorette@^2.0.14:
   version "2.0.20"
   resolved "https://registry.npmjs.org/colorette/-/colorette-2.0.20.tgz"
   integrity sha512-IfEDxwoWIjkeXL1eXcDiow4UbKjhLdq6/EuSVR9GMN7KVH3r9gQ83e73hsz1Nd1T3ijd5xv1wcWRYO+D6kCI2w==
-
-colour@0.7.1:
-  version "0.7.1"
-  resolved "https://registry.npmjs.org/colour/-/colour-0.7.1.tgz"
-  integrity sha512-Rel466v0EnmKPcsxHo91L4kgPs/6XF7Pu2LJNszq9lXYwi5CFWEeIiRaTX5ym7PPMdj4udDHkLSVC1//JVkZQg==
 
 combined-stream@^1.0.8:
   version "1.0.8"
@@ -3749,11 +3739,6 @@ emoji-regex@^8.0.0:
   version "8.0.0"
   resolved "https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz"
   integrity sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==
-
-emojis-list@^2.0.0:
-  version "2.1.0"
-  resolved "https://registry.npmjs.org/emojis-list/-/emojis-list-2.1.0.tgz"
-  integrity sha512-knHEZMgs8BB+MInokmNTg/OyPlAddghe1YBgNwJBc5zsJi/uyIcXoSDsL/W9ymOsBoBGdPIHXYJ9+qKFwRwDng==
 
 emojis-list@^3.0.0:
   version "3.0.0"
@@ -4554,11 +4539,6 @@ gopd@^1.0.1:
   integrity sha512-d65bNlIadxvpb/A2abVdlqKqV563juRnZ1Wtk6s1sIR8uNsXR70xqIzVqxVf1eTqDunwT2MkczEeaezCKTZhwA==
   dependencies:
     get-intrinsic "^1.1.3"
-
-graceful-fs@4.1.4:
-  version "4.1.4"
-  resolved "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.1.4.tgz"
-  integrity sha512-FJvXqYOJo21W86xfBsnT3Ev1hpRWRNdFfNEYSi/uVq+QmNADuhjwzoLtWc/p6lcqLA+l/g9GucxSHQrmOyJJEg==
 
 graceful-fs@^4.1.2, graceful-fs@^4.2.4, graceful-fs@^4.2.6, graceful-fs@^4.2.9:
   version "4.2.11"
@@ -5649,11 +5629,6 @@ json-stable-stringify-without-jsonify@^1.0.1:
   resolved "https://registry.npmjs.org/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz"
   integrity sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==
 
-json5@^0.5.0:
-  version "0.5.1"
-  resolved "https://registry.npmjs.org/json5/-/json5-0.5.1.tgz"
-  integrity sha512-4xrs1aW+6N5DalkqSVA8fxh458CXvR99WU8WLKmq4v8eWAL86Xo3BVqyd3SkA9wEVjCMqyvvRRkshAdOnBp5rw==
-
 json5@^1.0.1, json5@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/json5/-/json5-1.0.2.tgz"
@@ -5749,16 +5724,6 @@ loader-runner@^4.2.0:
   version "4.3.0"
   resolved "https://registry.npmjs.org/loader-runner/-/loader-runner-4.3.0.tgz"
   integrity sha512-3R/1M+yS3j5ou80Me59j7F9IMs4PXs3VqRrm0TU3AbKPxlmpoY1TNscJV/oGJXo8qCatFGTfDbY6W6ipGOYXfg==
-
-loader-utils@0.2.16:
-  version "0.2.16"
-  resolved "https://registry.npmjs.org/loader-utils/-/loader-utils-0.2.16.tgz"
-  integrity sha512-dd4/ZWk+/kNr/GHdKCOGamC6WTfmi6yFjWTJ+l1nTNHut+y4RxGWuWtOzWWXEmmvunTBspjvTsp8RsjhasOxDA==
-  dependencies:
-    big.js "^3.1.3"
-    emojis-list "^2.0.0"
-    json5 "^0.5.0"
-    object-assign "^4.0.1"
 
 loader-utils@^1.4.2:
   version "1.4.2"
@@ -6078,7 +6043,7 @@ nwsapi@^2.2.2:
   resolved "https://registry.npmjs.org/nwsapi/-/nwsapi-2.2.5.tgz"
   integrity sha512-6xpotnECFy/og7tKSBVmUNft7J3jyXAka4XvG6AUhFWRz+Q/Ljus7znJAA3bxColfQLdS+XsjoodtJfCgeTEFQ==
 
-object-assign@^4.0.1, object-assign@^4.1.1:
+object-assign@^4.1.1:
   version "4.1.1"
   resolved "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz"
   integrity sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==
@@ -8028,15 +7993,6 @@ typescript@^5.0.4:
   version "5.0.4"
   resolved "https://registry.npmjs.org/typescript/-/typescript-5.0.4.tgz"
   integrity sha512-cW9T5W9xY37cc+jfEnaUvX91foxtHkza3Nw3wkoF4sSlKn0MONdkdEndig/qPBWXNkmplh3NzayQzCiHM4/hqw==
-
-typings-for-css-modules-loader@^1.7.0:
-  version "1.7.0"
-  resolved "https://registry.npmjs.org/typings-for-css-modules-loader/-/typings-for-css-modules-loader-1.7.0.tgz"
-  integrity sha512-Mp7zDrcUmbUKl3JTLamTsMX+lntMotEm5I05j2RHB5EHb0WL1dAXlynpdlGR5Ye/QTvtL5w+RGB2jP32YoUpZw==
-  dependencies:
-    colour "0.7.1"
-    graceful-fs "4.1.4"
-    loader-utils "0.2.16"
 
 unbox-primitive@^1.0.2:
   version "1.0.2"
