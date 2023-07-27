@@ -18,9 +18,9 @@ const AboutBiography: FC = () => {
               Biography
             </h1>
             <p className={style.biography_text}>
-              Hi, i`m <strong>Ivan Shavrin</strong>, a frontend and backend developer.
+              Hi, i&apos;m <strong>Ivan Shavrin</strong>, a frontend and backend developer.
               My love is to create interesting and beautiful web applications. 
-              Every new project I`m working on, I carefully check and optimize. 
+              Every new project I&apos;m working on, I carefully check and optimize. 
               I want everyone to be able to use my development and not have any problems using it.
             </p>
             <p className={style.biography_text}>

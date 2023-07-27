@@ -1,0 +1,57 @@
+@use '/src/style/setting' as s;
+
+.education {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  align-items: center;
+  
+  margin-bottom: 50px;
+  min-height: 50vh;
+
+  &_list {
+    position: relative;
+    margin-top: 75px;
+    width: 75%;
+
+    &_container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  &_list:first-child {
+    margin-top: 25px;
+  }
+
+  // &_list::before {
+  //   content: '123';
+  //   position: absolute;
+  //   top: 50%;
+  //   left: -3rem;
+  // }
+
+  &_header {
+
+  }
+
+  &_place {
+    opacity: 0.5;
+  }
+
+  &_info {
+    text-align: justify;
+  }
+}
+
+@media (max-width: s.$container-max-widths-md) {
+  .education {
+    margin-top: 75px;
+
+    &_list {
+      margin-top: 50px;
+      width: 100%;
+    }
+  }
+}

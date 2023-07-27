@@ -23,7 +23,7 @@ $gap: 20px;
   align-items: center;
 
   min-height: calc(100vh - var(--nav-height));
-  overflow-x: hidden;
+  overflow: hidden;
 
   &_me {
     @extend %flex-col;
@@ -40,6 +40,8 @@ $gap: 20px;
 
   &_second {
     @extend %flex-col;
+
+    margin-top: 50px;
 
     &_block {
       width: 100%;
@@ -68,11 +70,11 @@ $gap: 20px;
 }
 
 
-@media (max-width: s.$container-max-widths-xll) {
-  .about {
-    overflow-x: hidden;
-  }
-}
+// @media (max-width: s.$container-max-widths-xll) {
+//   .about {
+//     overflow-x: hidden;
+//   }
+// }
 
 @media (max-width: s.$container-max-widths-md) {
   .about {
