@@ -1,129 +1,182 @@
 @use '../../style/setting' as s;
+@use '../../style/z-index-constant' as zIndex;
 
-.header_nav {
-  position: relative;
-
-  margin: 0 auto;
-  width: 100%;
-  height: 5rem;
-
-  will-change: auto;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-
-  width: 100%;
-  height: 100%;
-
-  background-color: transparent;
-
-  &_left,
-  &_right {
-    display: flex;
+@layer navbar {
+  .nav_btn {
+    display: none;
+  
+    background-color: transparent;
+    border: none;
+    // outline: none;
+    cursor: pointer;
+  
+    width: 50px;
+    height: 50px;
   }
+  
+  .header_nav {
+    position: relative;
 
-  &_right {
+    background-color: rgba($color: #000000, $alpha: 0);
+  
+    transition: background-color 0.5s ease-in-out;
+
+    margin: 0 auto;
+    width: 100%;
+    height: 5rem;
+  }
+  
+  .nav {
     display: flex;
-
-    margin: {
-      left: auto;
-      right: 20px;
+    align-items: center;
+  
+    width: 100%;
+    height: 100%;
+  
+    background-color: transparent;
+  
+    &_left,
+    &_right {
+      display: flex;
+    }
+  
+    &_right {
+      display: flex;
+  
+      margin: {
+        left: auto;
+        right: 20px;
+      }
     }
   }
-
-  &_logo {
-    object-fit: contain;
-    height: 2rem;
-    width: 2rem;
+  
+  .nav_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  
+    margin: {
+      left: 20px;
+    }
+  
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--on-background-color);
+    font-weight: bolder;
+    outline: none;
+    text-decoration: none;
+  
+    &__line {
+      position: absolute;
+      left: 0;
+      top: 1.5rem;
+  
+      background-color: var(--on-background-color);
+  
+      height: 1px;
+      width: 0%;
+  
+      transition: width 0.25s ease-out;
+    }
+  
+    &__icon {
+      fill: var(--on-background-color);
+  
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+  
+  @media (max-width: s.$container-max-widths-md) {
+    .header_nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: zIndex.$ui-index-4;
+      pointer-events: none;
+  
+      width: 100%;
+      height: 100%;
+    }
+  
+    // .header_nav.header_nav_open {
+    //   pointer-events: auto;
+    // }
+  
+    .nav_btn {
+      display: inline-block;
+    }
+  
+    .nav {
+      flex-direction: column;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: zIndex.$ui-index-4;
+  
+      background-color: var(--element-color);
+  
+      padding: 15px;
+      width: max-content;
+    
+      font-size: 1.2rem;
+  
+      translate: -100%;
+      transition: transform 0.5s ease-out;
+  
+      &_left {
+        flex-direction: inherit;
+        gap: 15px;
+      }
+  
+      &_right {
+        flex-direction: column;
+  
+        max-width: 300px;
+        margin: 15px auto;
+        gap: 15px;
+      }
+  
+      &_link {
+        margin: 0;
+        
+  
+        &__line {
+          display: none;
+        }
+      }
+    }
+  }
+  
+  @media (pointer: fine) and (hover: hover) {
+    .nav_link[aria-current='page'] {
+      .nav_link__line {
+        width: 100%;
+      }
+    }
+  
+    .nav_link:hover {
+      .nav_link__line {
+        width: 100%;
+      }
+    }
   }
 }
 
-.nav_link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-
-  margin: {
-    left: 20px;
-  }
-
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  color: var(--on-background-color);
-  font-weight: bolder;
-  outline: none;
-  text-decoration: none;
-
-  &__line {
-    position: absolute;
-    left: 0;
-    top: 1.5rem;
-
-    background-color: var(--on-background-color);
-
-    height: 1px;
-    width: 0%;
-
-    transition: width 0.25s ease-out;
-  }
-
-  &__icon {
-    fill: var(--on-background-color);
-
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-}
-
-@media (max-width: s.$container-max-widths-md) {
+@layer navbar_open {
   .header_nav {
-    height: 200px;
-    transform: translate(-100%);
-
-    transition: transform 0.5s ease-out;
+    &_open {
+      background-color: rgba($color: #000000, $alpha: 0.5);
+      pointer-events: all;
+    }
   }
 
   .nav {
-    flex-direction: column;
-
-    font-size: 1.2rem;
-
-    &_left {
-      flex-direction: inherit;
-    }
-
-    &_right {
-      max-width: 300px;
-      margin: 0 auto;
-    }
-
-    &_link {
-      margin: {
-        left: 15px;
-        top: 15px;
-      }
-
-      &__line {
-        display: none;
-      }
-    }
-  }
-}
-
-@media (pointer: fine) and (hover: hover) {
-  .nav_link[aria-current='page'] {
-    .nav_link__line {
-      width: 100%;
-    }
-  }
-
-  .nav_link:hover {
-    .nav_link__line {
-      width: 100%;
+    &_open {
+      transform: translate(100%);
     }
   }
 }

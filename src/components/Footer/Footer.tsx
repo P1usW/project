@@ -34,7 +34,7 @@ const Footer: FC = () => {
         className={style.footer_text}
       >
         <p>
-          The site was created without using UI libraries, if you find a flaw, you can leave a message
+          This is a test version of the site, if you find a flaw, you can leave a message
           on <i>github</i> <a className={style.footer_icon} target='_blank' rel='noreferrer' href='#'><Icon icon="bx:edit"/></a>
         </p>
         <p>
