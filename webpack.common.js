@@ -22,6 +22,11 @@ module.exports = function (env, argv) {
   const mode = argv.mode || (isDevServer ? 'development' : 'production');
   const isDevMode = mode !== 'production';
   
+  const envKeys = Object.keys(env).reduce((prev, next) => {
+    prev[`process.env.${next}`] = JSON.stringify(env[next]);
+    return prev;
+  }, {});
+
   return {
     // source-map
     devtool: 'source-map',
@@ -215,6 +220,7 @@ module.exports = function (env, argv) {
         filename: 'static/css/[name].[contenthash:8].css',
         chunkFilename: 'static/css/[name].[contenthash:8].chunk.css',
       }),
+      new webpack.DefinePlugin({'process.env.buildMode': JSON.stringify(`${argv.mode}`)}),
     ],
   };
 };

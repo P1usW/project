@@ -4,7 +4,7 @@ const common = require("./webpack.common");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = function (env, argv) {
-  const PORT = process.env.PORT || 8080;
+  const PORT = process.env.PORT || 8000;
   const commonConfig = common(env, argv);
 
   function removePlugin(searchFunc) {

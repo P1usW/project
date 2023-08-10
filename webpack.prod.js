@@ -2,6 +2,7 @@ const { merge } = require("webpack-merge");
 const CompressionPlugin = require("compression-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const WebpackAssetsManifest = require('webpack-assets-manifest');
 const common = require("./webpack.common");
 
 // (bytes) threshold for compression, url-loader plugins
@@ -11,7 +12,7 @@ module.exports = (env, argv) => {
   const commonConfig = common(env, argv);
 
   const extendedConfig = {
-    devtool: argv.sourceMap ? "hidden-source-map" : false, // option controls how source maps are generated (affects on build speed dramatically): https://v4.webpack.js.org/configuration/devtool/
+    devtool: env.sourcemap || false, // option controls how source maps are generated (affects on build speed dramatically): https://v4.webpack.js.org/configuration/devtool/
     performance: {
       assetFilter: function assetFilter(assetFilename) {
         return !/(\.map$)|(fonts)|(images)/.test(assetFilename); // ignore these files from perfomance-hints
@@ -49,6 +50,9 @@ module.exports = (env, argv) => {
         test: /\.js$|\.html$/,
         threshold: 10240,
         minRatio: 0.8
+      }),
+      new WebpackAssetsManifest({
+        // Options go here
       }),
     ],
   };

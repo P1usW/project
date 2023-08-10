@@ -14,7 +14,8 @@
     "react-router": "^6.10.0",
     "react-router-dom": "^6.10.0",
     "redux": "^4.2.1",
-    "sass": "^1.62.0"
+    "sass": "^1.62.0",
+    "swiper": "^10.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.21.8",
@@ -66,12 +67,13 @@
     "typescript": "^5.0.4",
     "typescript-plugin-css-modules": "^5.0.1",
     "webpack": "^5.78.0",
+    "webpack-assets-manifest": "^5.1.0",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.13.2",
     "webpack-merge": "^5.9.0"
   },
   "scripts": {
-    "build": "webpack --mode production --config webpack.prod.js --sourceMap true",
+    "build": "webpack --env sourcemap=hidden-source-map --mode production --config webpack.prod.js ",
     "serve": "webpack serve --mode development --config webpack.dev.js",
     "eslint": "eslint --ext .ts,.tsx src --fix",
     "test": "yarn jest",
