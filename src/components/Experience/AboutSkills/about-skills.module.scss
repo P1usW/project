@@ -1,0 +1,71 @@
+@use '/src/style/setting' as s;
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  
+  min-height: max-content;
+
+  &_row {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    position: relative;
+    
+    margin-top: 25px;
+    width: 100%;
+  }
+}
+
+
+.graph {
+  position: relative;
+  box-sizing: border-box;
+  order: 1;
+
+  background-color: var(--element-color);
+  border-radius: 15px;
+
+  padding: 10px;
+  width: 50%;
+  height: 300px;
+}
+
+%text-settings {
+  text-align: justify;
+  width: 50%;
+}
+
+.text {
+  &_left {
+    @extend %text-settings;
+    order: 0;
+  } 
+  
+  &_right {
+    @extend %text-settings;
+    order: 2;
+  }
+}
+
+@media (max-width: s.$container-max-widths-md) {
+  .skills {
+    &_row {
+      flex-direction: column;
+    }
+  }
+
+  .graph {
+    width: 100%;
+  }
+
+  .text {
+    &_left,
+    &_right {
+      width: 100%;
+      order: 0;
+    }
+  }
+}
