@@ -1,6 +1,6 @@
 @use '../../../../style/setting' as s;
 
-$gap: 20px;
+$gap: 25px;
 
 %flex-col {
   display: flex;
@@ -23,7 +23,6 @@ $gap: 20px;
   align-items: center;
 
   min-height: calc(100vh - var(--nav-height));
-  overflow: hidden;
 
   &_me {
     @extend %flex-col;
@@ -33,15 +32,12 @@ $gap: 20px;
     @extend %flex-row;
 
     &_block {
-      width: 50%;
-
+      flex-basis: 50%;
     }
   }
 
   &_second {
     @extend %flex-col;
-
-    margin-top: 50px;
 
     &_block {
       width: 100%;
@@ -62,19 +58,21 @@ $gap: 20px;
   }
 
   &_photo {
-    height: 100px;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    
     background-color: var(--element-color);
 
-    border-radius: 15px;
+    border-radius: 50px;
   }
 }
 
 
-// @media (max-width: s.$container-max-widths-xll) {
-//   .about {
-//     overflow-x: hidden;
-//   }
-// }
+@media (max-width: 1500px) {
+  .about {
+    overflow: hidden;
+  }
+}
 
 @media (max-width: s.$container-max-widths-md) {
   .about {

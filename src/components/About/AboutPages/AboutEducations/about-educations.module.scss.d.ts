@@ -1,5 +1,6 @@
 declare namespace AboutEducationsModuleScssNamespace {
   export interface IAboutEducationsModuleScss {
+    align_header: string;
     education: string;
     education_info: string;
     education_list: string;

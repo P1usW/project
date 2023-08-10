@@ -1,49 +1,55 @@
 import { FC } from 'react';
 import style from './about-biography.module.scss';
 import AnimationCard from '@src/ui/AnimationCard/AnimationCard';
+import LazyImage from '@src/ui/LazyImage/LazyImage';
+import myPhoto from '@src/assets/8fDTCtxqbyk.jpg';
 
 const AboutBiography: FC = () => {
   
   return (   
     <div className={style.about}>
       <div className={style.about_first}>
-        <AnimationCard
-          pos='left'
-          divClassName={style.about_first_block}
-        >
-          <div className={style.biography}>
-            <h1
-              className={style.biography_header}
-            >
-              Biography
-            </h1>
-            <p className={style.biography_text}>
-              Hi, i&apos;m <strong>Ivan Shavrin</strong>, a frontend and backend developer.
-              My love is to create interesting and beautiful web applications. 
-              Every new project I&apos;m working on, I carefully check and optimize. 
-              I want everyone to be able to use my development and not have any problems using it.
-            </p>
-            <p className={style.biography_text}>
-              I believe that the purpose of each created application is to convey all the work that people have put into it. 
-              Transfer your skills through design and functionality, as well as be interested in the development of your product
-            </p>
-            <p className={style.biography_text}>
-              Even when I was young, I looked at programming with surprise and wondered <q>How can I do something like this?</q>.
-              While studying at the university, I tried out several languages, such as Java, C++, C, Python, 
-              but in the end I was only interested in JavaScript and a little bit later TypeScript.
-            </p>
-          </div>
-        </AnimationCard>
-        <AnimationCard
-          pos='right'
-          divClassName={style.about_first_block}
-        >
-          <div className={style.biography}>
-            <div className={style.biography_photo}>
-              123
+        <div className={style.about_first_block}>
+          <AnimationCard
+            pos='left'
+          >
+            <div className={style.biography}>
+              <h1
+                className={style.biography_header}
+              >
+                Biography
+              </h1>
+              <p className={style.biography_text}>
+                Hi, i&apos;m <strong>Ivan Shavrin</strong>, a frontend and backend developer.
+                My love is to create interesting and beautiful web applications. 
+                Every new project I&apos;m working on, I carefully check and optimize. 
+                I want everyone to be able to use my development and not have any problems using it.
+              </p>
+              <p className={style.biography_text}>
+                I believe that the purpose of each created application is to convey all the work that people have put into it. 
+                Transfer your skills through design and functionality, as well as be interested in the development of your product
+              </p>
+              <p className={style.biography_text}>
+                Even when I was young, I looked at programming with surprise and wondered <q>How can I do something like this?</q>.
+                While studying at the university, I tried out several languages, such as Java, C++, C, Python, 
+                but in the end I was only interested in JavaScript and a little bit later TypeScript.
+              </p>
             </div>
-          </div>
-        </AnimationCard>
+          </AnimationCard>
+        </div>
+        <div className={style.about_first_block}>
+          <AnimationCard
+            pos='right'
+          >
+            <div className={style.biography}>
+              <LazyImage
+                imageClassName={style.biography_photo}
+                src={myPhoto}
+                alt='My photo while studying at NSTU'
+              />
+            </div>
+          </AnimationCard>
+        </div>
       </div>
       <div className={style.about_second}>
       <AnimationCard

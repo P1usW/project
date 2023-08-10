@@ -6,12 +6,12 @@
   list-style: none;
   align-items: center;
   
-  margin-bottom: 50px;
+  margin: 50px auto;
   min-height: 50vh;
 
   &_list {
     position: relative;
-    margin-top: 75px;
+    margin-top: 25px;
     width: 75%;
 
     &_container {
@@ -22,7 +22,7 @@
   }
 
   &_list:first-child {
-    margin-top: 25px;
+    margin-top: 0px;
   }
 
   // &_list::before {
@@ -45,12 +45,19 @@
   }
 }
 
+.align_header {
+  text-align: center;
+  text-transform: uppercase;
+
+  margin-top: 25px;
+}
+
 @media (max-width: s.$container-max-widths-md) {
   .education {
-    margin-top: 75px;
+    margin: 25px auto;
 
     &_list {
-      margin-top: 50px;
+      margin-top: 25px;
       width: 100%;
     }
   }
