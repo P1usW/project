@@ -53,6 +53,7 @@
 :root::-webkit-scrollbar {
   overflow: auto;
   width: 0.5rem;
+  height: 0.5rem;
   background-color: transparent;
   
 }
@@ -75,7 +76,7 @@ html {
   font-size: 16px;
   line-height: 1.5;
 
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; 
 }
 
 html[data-theme=light] {
@@ -92,6 +93,9 @@ body {
   line-height: inherit;
 
   background-color: var(--background-color);
+
+  overscroll-behavior: none;
+  scrollbar-gutter: stable;
 }
 
 main {
@@ -104,3 +108,13 @@ main {
   max-width: f.$container-max-widths-xll;
   margin: 0 auto;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+// @media (preferse-reduced-motion: no-preference) {
+//   html {
+//     scroll-behavior: smooth;
+//   }
+// }

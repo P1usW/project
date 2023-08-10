@@ -8,6 +8,7 @@ import { getUserInfo } from "@src/api/gitHubApi/getUserInfo";
 const Projects = lazy(() => import(/* webpackChunkName: "Projects" */ '@src/components/Projects/Projects'));
 const NotFound = lazy(() => import(/* webpackChunkName: "NotFound" */ '@src/components/NotFound/NotFound'));
 const About = lazy(() => import(/* webpackChunkName: "About" */ '@src/components/About/About'));
+const Experience = lazy(() => import(/* webpackChunkName: "Experience" */ '@src/components/Experience/Experience'));
 
 const publicRoutes = [
   {
@@ -15,7 +16,7 @@ const publicRoutes = [
     Component: Home
   },
   {
-    path: 'about',
+    path: 'about-me',
     Component: About 
   },
   {
@@ -27,6 +28,10 @@ const publicRoutes = [
       const user = getUserInfo(username)
       return defer({repos, user})
     }
+  },
+  {
+    path: 'experience',
+    Component: Experience 
   },
   {
     path: '*',
