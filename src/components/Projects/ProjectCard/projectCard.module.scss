@@ -4,7 +4,6 @@
   min-width: 200px;
   width: 100%;
   perspective: 1200;
-  transform-style: preserve-3d;
   cursor: pointer;
 }
 
@@ -69,4 +68,6 @@
 .container:hover .flipper {
   transform: rotateY(180deg);
 }
+
+
 

@@ -42,6 +42,8 @@
     min-width: 300px;
     max-height: 500px;
     min-height: 350px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 
@@ -54,6 +56,8 @@
     display: flex;
     gap: 15px;
   }
+
+
 }
 
 @media (max-width: f.$container-max-widths-lg) {
@@ -65,4 +69,12 @@
       align-items: center;
     }
   }
+}
+
+@supports (height: 100svh) {
+  .home {
+    min-height: calc(100svh - 5rem);
+  }
+
+
 }
